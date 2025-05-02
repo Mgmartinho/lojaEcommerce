@@ -1,7 +1,7 @@
 
 import { Button } from '../ui/Button';
 import styles from './product-card.module.scss';
-import { AccountBookTwoTone, CloseOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { CloseOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
 
 
