@@ -1,21 +1,22 @@
 
 import { Button } from '../ui/Button';
 import styles from './product-card.module.scss';
-import {AccountBookTwoTone} from '@ant-design/icons';
+import { AccountBookTwoTone, CloseOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
 
 
 interface ProductCardProps {
-  
+  id?: string;
   title: string;
   description: string;
   price: number;
   imageUrl: string;
+  isInCart?: boolean;
 }
 
 
 export function ProductCard({
-   description, title, price, imageUrl,
+  description, title, price, imageUrl, isInCart,
 }: ProductCardProps) {
 
 
@@ -34,10 +35,22 @@ export function ProductCard({
           <span className={styles.price}>R$: {price}</span>
         </div>
 
-        <Button > 
-          <AccountBookTwoTone/>
-          <strong>Adicionar ao Carrinho</strong>
-          
+        <Button 
+            variant={isInCart? "danger" : "primary" } 
+          >
+          {isInCart ?
+              (
+            <>
+              <CloseOutlined />
+              "Remover do Carrinho" :
+            </>
+          ) : (
+          <>
+            <ShoppingCartOutlined />
+            "Adicionar ao Carrinho"
+          </>
+          )
+           }
         </Button>
 
       </div>
