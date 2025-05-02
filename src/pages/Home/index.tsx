@@ -1,4 +1,4 @@
-import React from 'react'
+
 import style from "./home.module.scss"
 import Header from '../../components/Header';
 
@@ -7,7 +7,10 @@ function Home
   return (
     <div className={style.container}>
       <Header />
-      <h1>Home is here</h1>
+      <div className={style.banner}>
+          <h1>E-commerce Developer</h1>
+
+      </div>
     </div>
   )
 }

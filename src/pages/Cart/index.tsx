@@ -1,11 +1,13 @@
-import React from 'react'
+
 import style from "./cart.module.scss"
+import Header from '../../components/Header';
 
 function Cart() {
   return (
     <div className={style.container}>
+      <Header/>
+
       <h1>Cart</h1>
-      <p>Your cart is empty.</p>
     </div>
   )
 }

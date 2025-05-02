@@ -1,4 +1,4 @@
-import React from 'react'
+
 import style from "./success.module.scss"
 
 function Success
