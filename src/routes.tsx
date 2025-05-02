@@ -8,9 +8,9 @@ import Success from './pages/Success';
     return(
         <Routes>
             <Route element={<Home/>} path="/" />
-            <Route element={<Cart/>} path="/" />
-            <Route element={<Product/>} path="/" />
-            <Route element={<Success/>} path="/" />
+            <Route element={<Cart/>} path="/cart" />
+            <Route element={<Product/>} path="/product" />
+            <Route element={<Success/>} path="/success" />
         </Routes>
     )
 }

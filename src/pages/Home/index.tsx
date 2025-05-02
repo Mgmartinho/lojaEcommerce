@@ -1,14 +1,13 @@
 import React from 'react'
 import style from "./home.module.scss"
+import Header from '../../components/Header';
 
 function Home
 () {
   return (
     <div className={style.container}>
-      <h1>Home
-
-      </h1>
-      <p>Your Home is empty.</p>
+      <Header />
+      <h1>Home is here</h1>
     </div>
   )
 }
