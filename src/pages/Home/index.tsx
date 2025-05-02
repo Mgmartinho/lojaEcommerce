@@ -20,8 +20,7 @@ function Home
         
         />
        
-        <ProductCard />
-        <ProductCard />
+      
       </div>
     </div>
   )

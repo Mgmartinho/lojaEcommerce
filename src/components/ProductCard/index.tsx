@@ -1,8 +1,12 @@
 
+import { Button } from '../ui/Button';
 import styles from './product-card.module.scss';
+import {AccountBookTwoTone} from '@ant-design/icons';
+
+
 
 interface ProductCardProps {
-  id: string;
+  
   title: string;
   description: string;
   price: number;
@@ -27,10 +31,14 @@ export function ProductCard({
         <div className={styles.content}>
           <h2>{title}</h2>
           <p>{description}</p>
-          <span className={styles.price}>{price}</span>
+          <span className={styles.price}>R$: {price}</span>
         </div>
 
-        <button className={styles.addToCart}>Add to Cart</button>
+        <Button > 
+          <AccountBookTwoTone/>
+          <strong>Adicionar ao Carrinho</strong>
+          
+        </Button>
 
       </div>
 
