@@ -16,7 +16,7 @@ interface ProductCardProps {
 
 
 export function ProductCard({
-  description, title, price, imageUrl, isInCart,
+  description, title, price, imageUrl, isInCart, 
 }: ProductCardProps) {
 
 
