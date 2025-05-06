@@ -1,15 +1,14 @@
 
 import style from "./home.module.scss"
 import { ProductCard } from "../../components/ProductCard";
-import placaDeVideo from '../../assets/placaDeVideo.webp';
-import processadorAmd5 from '../../assets/processadoramd5.webp';
-import waterCooler from '../../assets/waterColler.webp';
-import placaMaeAsusCrossHair from '../../assets/placaMaeAsusCrossHair.jpg';
-import memoryRam from '../../assets/memoriaRam.jpg';
+import { useGetProducts } from "../../hooks/integrations/global/mutations";
 
 
-function Home
-  () {
+
+function Home() {
+
+  const {data: products} = useGetProducts();
+
   return (
     <div className={style.container}>
 
@@ -17,89 +16,18 @@ function Home
         <h1>E-commerce Developer</h1>
       </div>
       <div className={style.products}>
+
+      {products?.map((product) => (
         <ProductCard
-          id="1"
-          title="GPU RTX 4080 S"
-          description="GPU NVIDEA"
-          price={3299.99}
-          imageUrl={placaDeVideo}
-          isInCart
-        />
+        id={product.id}
+        title={product.title}
+        description={product.description}
+        price={product.prince}
+        imageUrl={product.imageUrl}
+        
+      />
+      ))}
 
-
-        <ProductCard
-          title="Processador AMD Ryzen 5"
-          description=" CPU AMD"
-          price={1789.99}
-          isInCart
-          imageUrl={processadorAmd5}
-        />
-
-        <ProductCard
-          title="Mother Board CrossHair"
-          description="MotherBoard"
-          price={4379.99}
-
-          imageUrl={placaMaeAsusCrossHair}
-        />
-
-        <ProductCard
-          title="Water Cooler Asus "
-          description="Water Cooler"
-          price={2549.99}
-          imageUrl={waterCooler}
-          isInCart
-        />
-
-        <ProductCard
-          title="Memory Ram"
-          description="Memory Primary"
-          price={600.00}
-
-          imageUrl={memoryRam}
-        />
-
-<ProductCard
-          id="1"
-          title="GPU RTX 4080 S"
-          description="GPU NVIDEA"
-          price={3299.99}
-          imageUrl={placaDeVideo}
-          isInCart
-        />
-
-
-        <ProductCard
-          title="Processador AMD Ryzen 5"
-          description=" CPU AMD"
-          price={1789.99}
-          isInCart
-          imageUrl={processadorAmd5}
-        />
-
-        <ProductCard
-          title="Mother Board CrossHair"
-          description="MotherBoard"
-          price={4379.99}
-
-          imageUrl={placaMaeAsusCrossHair}
-        />
-
-        <ProductCard
-          title="Water Cooler Asus "
-          description="Water Cooler"
-          price={2549.99}
-          imageUrl={waterCooler}
-          isInCart
-        />
-
-        <ProductCard
-          title="Memory Ram"
-          description="Memory Primary"
-          price={600.00}
-
-          imageUrl={memoryRam}
-        />
       </div>
 
     </div>
