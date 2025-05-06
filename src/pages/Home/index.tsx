@@ -3,6 +3,10 @@ import style from "./home.module.scss"
 import { ProductCard } from "../../components/ProductCard";
 import placaDeVideo from '../../assets/placaDeVideo.webp';
 import processadorAmd5 from '../../assets/processadoramd5.webp';
+import waterCooler from '../../assets/waterColler.webp';
+import placaMaeAsusCrossHair from '../../assets/placaMaeAsusCrossHair.jpg';
+
+
 
 function Home
   () {
@@ -16,7 +20,7 @@ function Home
         <ProductCard
           id="1"
           title="GPU RTX 4080 S"
-          description="Placa NVIDEA"
+          description="GPU NVIDEA"
           price={3299.99}
           imageUrl={placaDeVideo}
           isInCart
@@ -25,25 +29,25 @@ function Home
 
         <ProductCard
           title="Processador AMD Ryzen 5"
-          description=" Processador AMD"
-          price={999.99}
+          description=" CPU AMD"
+          price={1789.99}
           isInCart
           imageUrl={processadorAmd5}
         />
 
         <ProductCard
-          title="GPU RTX 4080 S"
-          description="Placa NVIDEA"
-          price={3299.99}
+          title="Mother Board CrossHair"
+          description="MotherBoard"
+          price={4379.99}
 
-          imageUrl={placaDeVideo}
+          imageUrl={placaMaeAsusCrossHair}
         />
 
         <ProductCard
-          title="GPU RTX 4080 S"
-          description="Placa NVIDEA"
-          price={3299.99}
-          imageUrl={placaDeVideo}
+          title="Water Cooler Asus "
+          description="Water Cooler"
+          price={2549.99}
+          imageUrl={waterCooler}
           isInCart
         />
 
